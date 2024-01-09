@@ -1,38 +1,74 @@
-.App {
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+html,
+    body,
+    h1,
+    p {
+          font-family: Outfit, sans-serif;
+    }
+
+.default-transition {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.app {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.auto-complete {
+  position: relative;
+  display: grid;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.auto-complete input {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(189 190 194 / var(--tw-border-opacity));
+  font-family: Outfit, sans-serif;
+  border-radius: 6px;
+  font-weight: 400;
+  font-size: 1rem;
+  background-color: #f1f1f1;
+  height: 42px;
+  padding: 10px;
+  font-size: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.auto-complete input:hover {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #D5BFBF;
+}
+
+.auto-complete input:focus {
+  border-color: #396EB0;
+}
+
+.auto-complete-item {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #d4d4d4;
+}
+
+.auto-complete-item:hover {
+  background-color: #e9e9e9;
+}
+
+.loading-indicator {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 8px;
+  background-color: #e0e0e0;
+  text-align: center;
 }
