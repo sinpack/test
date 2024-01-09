@@ -7,11 +7,10 @@ import { fetchData } from '../api/nameAPI';
 jest.mock('../api/nameAPI');
 
 describe('AutoComplete', () => {
-  it('renders AutoComplete component after isLoading has finished', async () => {
+  it('Check rendering the correct number of items after loading state has finished', async () => {
     // Mocking the fetchData function
     const mockData = ['Paul', 'Andrew', 'Anna'];
     (fetchData as jest.Mock).mockResolvedValue(mockData);
-    // console.log(await fetchData());
     const { container } = render(<AutoComplete />);
 
     // Simulate user input
@@ -29,12 +28,6 @@ describe('AutoComplete', () => {
 
       // Assert that there is only one AutoCompleteItem with "pau"
       expect(autoCompleteItems.length).toBe(1);
-
-      // Log the content of the screen
-      console.log(screen.debug());
-      console.log(autoCompleteItems.length);
     });
-
-    // You can also test other states and interactions, for example, clicking on a suggestion.
   });
 });
