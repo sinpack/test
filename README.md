@@ -1,32 +1,37 @@
-# Getting Started with Create React App
+# React TypeScript Auto-Complete Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project implements a React TypeScript auto-complete component with the following features:
 
-## Available Scripts
+- Pure React implementation with internal DOM functions.
+- Asynchronous data filtering, simulating a real REST call using mock data.
+- Basic CSS styling for a decent user experience.
+- Highlighting of the matching part of the text.
+- No external state management libraries, using only native React methods.
+- Functional component with hooks.
 
-In the project directory, you can run:
+## Getting Started
 
-### `npm start`
+Follow these steps to run the project locally:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Prerequisites
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Node.js and npm should be installed on your machine.
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Download the repository:
 
-### `npm run build`
+- download and unzip the attached zip file
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Navigate to the project folder:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- cd test-main
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Install dependencies:
 
-### `npm run eject`
+- npm install
+
+4. Run the development server:
+
+- npm start
+- Open your browser and navigate to http://localhost:3000 to view the app.
