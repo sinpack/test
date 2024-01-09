@@ -4,10 +4,10 @@ This project implements a React TypeScript auto-complete component with the foll
 
 - Pure React implementation with internal DOM functions.
 - Asynchronous data filtering, simulating a real REST call using mock data.
-- Basic CSS styling for a decent user experience.
+- Basic CSS styling.
 - Highlighting of the matching part of the text.
 - No external state management libraries, using only native React methods.
-- Functional component with hooks.
+- Functional components with hooks.
 
 ## Getting Started
 
