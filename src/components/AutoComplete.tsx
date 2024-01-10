@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import { AutoCompleteItem } from './AutoCompleteItem';
 import { FeedbackMessage } from './FeedbackMessage';
-import { fetchData } from '../api/nameAPI';
+import { fetchUsername } from '../api/fetchUsername';
 
 const AutoComplete: React.FC = () => {
   const [inputValue, setInputValue] = useState<string>('');
@@ -22,8 +22,8 @@ const AutoComplete: React.FC = () => {
         try {
           //We call fetchData() in this side effect every time the input changes
           // (except the first item and every time we select an item from the suggested list clearing the suggested array)
-          const data = await fetchData();
-          const filteredItems = data.filter((item) =>
+          const userNames: string[] = await fetchUsername();
+          const filteredItems: string[] = userNames.filter((item: string) =>
             // We want to check if the current input value belongs/is included to every string of the fetched items
             // In order to compare, we lowercase both input value and each string of the list and check if the
             // value is included in each string of the list
@@ -41,8 +41,8 @@ const AutoComplete: React.FC = () => {
 
     // We use the fetchSuggestions as a callback inside a setTimeout to debounce the input to reduce unnecessary calls
     const debounceTimer = setTimeout(fetchSuggestions, 100);
-    // Cleaning up of the debounce
 
+    // Cleaning up of the debounce
     return () => clearTimeout(debounceTimer);
     //dependency for the input value in the useEffect
   }, [inputValue, isClicked]);
@@ -96,7 +96,6 @@ const AutoComplete: React.FC = () => {
         data={suggestions}
         selectionClicked={isClicked}
       />
-
       {!isLoading && renderSuggestions()}
     </div>
   );
