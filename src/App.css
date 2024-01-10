@@ -4,7 +4,7 @@
 html,
     body,
     h1,
-    p {
+    span {
           font-family: Outfit, sans-serif;
     }
 
@@ -12,7 +12,6 @@ html,
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .app {
@@ -31,12 +30,12 @@ html,
 .auto-complete input {
   border-width: 1px;
   border-style: solid;
-  border-color: rgb(189 190 194 / var(--tw-border-opacity));
+  border-color: #D3D4D8;
   font-family: Outfit, sans-serif;
   border-radius: 6px;
   font-weight: 400;
   font-size: 1rem;
-  background-color: #f1f1f1;
+  background-color: #BDBEC2;
   height: 42px;
   padding: 10px;
   font-size: 16px;
@@ -45,11 +44,12 @@ html,
 .auto-complete input:hover {
   border-width: 1px;
   border-style: solid;
-  border-color: #D5BFBF;
+  border-color: #787C84;
 }
 
 .auto-complete input:focus {
-  border-color: #396EB0;
+  border-color: #1A63F5;
+  outline: none;
 }
 
 .auto-complete-item {
